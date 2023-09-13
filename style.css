@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* NOMS */
+
+.container_noms {
+    margin-top: 0.5em;
+    width: 100%;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 4fr auto auto 4fr;
+}
+
+.nom_div {
+    display: flex;
+    align-items: center;
+}
+
+.container_set_gagne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nom_div_bleu {
+    justify-content: right;
+}
+
+/* POINTAGE */
+
+.container_pointages {
+    margin: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container_pointage_cote {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.container_controle_points {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-evenly;
+}
+
+.container_controle_points button {
+    height: 50%;
+    cursor: pointer;
+}
+
+.container_sets {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container_points {
+    height: 75vh;
+    display: grid;
+    place-content: center;
+}
+
+.container_points h1 {
+    font-size: 10em;
+}
+
+/* CONTROL DE LA GAME */
+
+.container_button_control_game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

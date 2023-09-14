@@ -1,19 +1,26 @@
 * {
     margin: 0;
     padding: 0;
+    /* color: white; */
+}
+
+:root {
+    --dark-green: #3d8f58;
+    --result: #486a5c;
 }
 
 body {
+    background-color: black;
     width: 100vw;
-    height: 100vh;
 }
 
 /* NOMS */
 
 .container_noms {
-    margin-top: 0.5em;
+    margin-top: 1em;
     width: 100%;
     display: grid;
+    color: white;
     gap: 2em;
     grid-template-columns: 4fr auto auto 4fr;
 }
@@ -21,12 +28,25 @@ body {
 .nom_div {
     display: flex;
     align-items: center;
+    background-color: var(--dark-green);
+    padding: 10px;
+}
+
+#nom_div_bleu {
+    padding-right: 15px;
+    border-radius: 0px 999px 999px 0px;
+}
+
+#nom_div_rouge {
+    padding-left: 15px;
+    border-radius: 999px 0 0 999px;
 }
 
 .container_set_gagne {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 25px;
 }
 
 #nom_div_bleu {
@@ -39,6 +59,7 @@ body {
     margin: 1.5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: white;
 }
 
 .container_pointage_cote {
@@ -51,12 +72,37 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 
 .container_controle_points button {
-    height: 50%;
+    box-shadow: unset;
+    border: unset;
+    border-radius: 15px;
+    color: white;
+    font-size: 50px;
     cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: #323232;
+}
+
+button {
+    -webkit-transition: background-color 100ms ease-out;
+    -moz-transition: background-color 100ms ease-out;
+    -o-transition: background-color 100ms ease-out;
+    transition: background-color 100ms ease-out;
+
+    -webkit-transition: transform 100ms ease-out;
+    -moz-transition: transform 100ms ease-out;
+    -o-transition: transform 100ms ease-out;
+    transition: transform 100ms ease-out;
+}
+
+.container_controle_points button:hover {
+    background-color: #4b4b4b;
+    transform: scale(1.03, 1.03);
 }
 
 .container_sets {
@@ -64,6 +110,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 30px;
 }
 
 .container_points {
@@ -82,4 +129,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1em;
+}
+
+.container_button_control_game button {
+    box-shadow: unset;
+    border: unset;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+}
+
+.container_button_control_game button:hover {
+    transform: scale(1.03);
+    transform: scale(1.03, 1.03);
+}
+
+.container_button_control_game button#new_match {
+    background: #a10000;
+}
+
+.container_button_control_game button#next_set {
+    background: var(--dark-green);
+}
+
+.container_button_control_game button#new_match:hover {
+    background-color: #c30000;
+}
+
+.container_button_control_game button#next_set:hover {
+    background-color: #4db570;
 }

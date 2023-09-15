@@ -6,6 +6,8 @@
 
 :root {
     --dark-green: #3d8f58;
+    --dark-blue: #1515df;
+    --light-blue: blue;
     --result: #486a5c;
 }
 
@@ -110,7 +112,7 @@ button {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 30px;
+    font-size: 45px;
 }
 
 .container_points {
@@ -142,7 +144,7 @@ button {
     color: white;
 }
 
-.container_button_control_game button:hover {
+.container_button_control_game button:hover:not([disabled]) {
     transform: scale(1.03);
     transform: scale(1.03, 1.03);
 }
@@ -155,10 +157,22 @@ button {
     background: var(--dark-green);
 }
 
+.container_button_control_game button#change_side {
+    background: var(--dark-blue);
+}
+
+.container_button_control_game button#change_side:hover {
+    background: var(--light-blue);
+}
+
 .container_button_control_game button#new_match:hover {
     background-color: #c30000;
 }
 
-.container_button_control_game button#next_set:hover {
+.container_button_control_game button#next_set:hover:not([disabled]) {
     background-color: #4db570;
+}
+
+.container_button_control_game button#next_set:disabled {
+    background: gray;
 }
